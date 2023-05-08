@@ -42,9 +42,9 @@ def convert_add(values: list) -> int:
     for value in values:
         int_val4.append(int(value))
     
-    count = 0    
+    sum = 0    
     for value in int_val4:
-        count += value
+        sum += value
 
     return sum(int_val)
 
