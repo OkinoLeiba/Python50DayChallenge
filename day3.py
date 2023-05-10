@@ -43,8 +43,10 @@ class Register:
         
         y_students = [student for student in self.register.values() if student == "yes"]
         len(y_students)
-        count_students = [sum(student.count() for student in self.register.values() if student == "yes")]
+        count_students = sum(student.count() for student in self.register.values() if student == "yes")
         count_students = y_students.count(y_students)
+        
+        y_student2 = sum(1 for student in self.register.values() if student == "yes")
     
         print("Number of Registered Student is ", count_student)
 

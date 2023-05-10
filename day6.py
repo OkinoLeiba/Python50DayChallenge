@@ -39,12 +39,15 @@ def zeroed(input: list) -> None:
     # input[end_range] = 0
     
     input.pop(0)
-    input.pop(len(input)-1)
+    input.pop(-1)
     input.insert(0,0)
     input.insert(len(input), 0)
 
+    print([0, *input[1:-1], 0])
 
     print(input)
+    
+  
 
 
 

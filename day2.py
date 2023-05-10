@@ -36,6 +36,8 @@ def convert_add(values: list) -> int:
     
     int_val5 = map(lambda x: int(x), values)
     
+    int_val6 = sum(map(int, values))
+    
     the_sum = itertools.accumulate(map(lambda x: int(x), values), func=add)
     
     int_val4 = []
@@ -110,6 +112,12 @@ def check_duplicates4(fruits: list) -> str|None:
         else:
             return f"Not To Be the Duplicates"
     
+ 
+ # not my code   
+def check_duplicates5(fruits: list) -> str|list|None:
+    duplicates = set()
+    return "No Duplicates" if len(fruits) == len(set(fruits)) else [x for x in fruits if x in duplicates or duplicates.add(x)]
+
     
 
 
@@ -123,4 +131,4 @@ if len(fruits) < len(eval_list):
 
 
 
-check_duplicates3(fruits)
+check_duplicates5(fruits)

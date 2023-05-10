@@ -78,7 +78,8 @@ def longest_value(item: dict) -> int|str|None:
             result = individual_fruit
             
             return result 
-
+        
+    max(len(individual_fruit) for individual_fruit in fruits.values())
 
 def longest_value2(item: dict) -> int:
     key=lambda k: len(item[k])

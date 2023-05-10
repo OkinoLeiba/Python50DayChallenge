@@ -57,8 +57,8 @@ def gender_count(students: list) -> None|str:
     count_male3 = count['male']
     count_female3 = count['female']
 
-    # count_male = [x.count() for x in lower_case_stu if lower_case_stu == "male"]
-    # count_female = [x.count() for x in lower_case_stu if lower_case_stu == "female"]
+    count_male4 = [x.count() for x in lower_case_stu if lower_case_stu == "male"]
+    count_female5 = [x.count() for x in lower_case_stu if lower_case_stu == "female"]
     
     for x in lower_case_stu:
         if x == "male":

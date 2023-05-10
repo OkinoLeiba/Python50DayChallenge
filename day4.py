@@ -22,7 +22,7 @@ import sys, math
 
 
 
-def only_floats(num1, num2):
+def only_floats(num1: float, num2: float) -> int:
 
     test_num1 = num1 % int(num1)
     test_num2 = num2 % int(num2)
@@ -47,13 +47,17 @@ def only_floats(num1, num2):
         return 1
     else: 
         return 0
+    
+    return 2 if type(num1) == float and type(num2) == float else 1 if type(num1) == float or type(num2) == float else 0
 
 only_floats(200.00, 201)
 
 
-def word_index(the_list):
+def word_index(the_list: list) -> list|None:
     
     result_max = max(the_list, key=len)
+    
+    result = the_list.index(max(the_list, key=len))
     
     for word in the_list:
         if word == max(the_list, key=len):
